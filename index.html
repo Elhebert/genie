@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Genie by Elhebert</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Genie</h1>
+        <p>Small packages.json scripts that replace gulp/gruntfiles.</p>
+
+        <p class="view"><a href="https://github.com/Elhebert/genie">View the Project on GitHub <small>Elhebert/genie</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/Elhebert/genie/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/Elhebert/genie/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/Elhebert/genie">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="genie" class="anchor" href="#genie" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Genie</h1>
+
+<p>Genie is a small packages.json that replace gulp/gruntfiles.</p>
+
+<blockquote>
+<p>See, all you gotta do is rub that lamp, and I'll say:
+"Mr. Aladdin, sir, what will your pleasure be?"</p>
+</blockquote>
+
+<p><img src="http://i.giphy.com/tpTOw6sljB2U.gif" alt="genie"></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>To run one of the scripts, simply use the following syntax <code>npm run &lt;scriptname&gt;</code></p>
+
+<h3>
+<a id="available-scripts" class="anchor" href="#available-scripts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Available scripts</h3>
+
+<h4>
+<a id="babel" class="anchor" href="#babel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>babel</code>:</h4>
+
+<p>Compile es6 javacsript into es5 compatible javascript.</p>
+
+<ul>
+<li>
+<em>input</em>: <code>src</code> directory</li>
+<li>
+<em>output</em>: <code>dist/es5</code> directory</li>
+</ul>
+
+<h4>
+<a id="linting" class="anchor" href="#linting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>linting</code>:</h4>
+
+<p>Verify the linting of the javascript files (using jshint and jscs).</p>
+
+<ul>
+<li>
+<em>input</em>: All the available javascript files.</li>
+<li>
+<em>exclude</em>: <code>.node_modules</code> and <code>.bower_components</code>
+</li>
+</ul>
+
+<h4>
+<a id="uglify" class="anchor" href="#uglify" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>uglify</code>:</h4>
+
+<p>Uglify and minify the javascript files</p>
+
+<ul>
+<li>
+<em>input</em>: Every <code>.js</code> files inside the <code>dist/es5</code>directory</li>
+<li>
+<em>output</em>: <code>dist/app.min.js</code>
+</li>
+</ul>
+
+<h4>
+<a id="scss" class="anchor" href="#scss" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>scss</code>:</h4>
+
+<p>Compile the scss files into css.</p>
+
+<ul>
+<li>
+<em>input</em>: <code>src/styles/style.scss</code>.</li>
+<li>
+<em>output</em>: <code>dist/style.css</code> directory</li>
+</ul>
+
+<h4>
+<a id="autoprefixer" class="anchor" href="#autoprefixer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>autoprefixer</code>:</h4>
+
+<p>Parse css and add prefixes.</p>
+
+<ul>
+<li>
+<em>input</em>: <code>dist/style.css</code>
+</li>
+<li>
+<em>output</em>: <code>dist/style.css</code>
+</li>
+</ul>
+
+<h4>
+<a id="serve" class="anchor" href="#serve" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>serve</code>:</h4>
+
+<p>synchronise your browser on file changes</p>
+
+<ul>
+<li>
+<em>files</em>: <code>dst/style.css</code>, <code>src/**/*.js</code>and <code>**/*.html</code>
+</li>
+<li>
+<em>address</em>: <code>localhost:3000</code>
+</li>
+</ul>
+
+<h4>
+<a id="buildcss" class="anchor" href="#buildcss" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>build:css</code>:</h4>
+
+<p>Run the <code>scss</code> and <code>autoprefixer</code> scripts.</p>
+
+<h4>
+<a id="buildjs" class="anchor" href="#buildjs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>build:js</code>:</h4>
+
+<p>Run the <code>linting</code>, <code>babel</code> and <code>uglify</code> scripts.</p>
+
+<h4>
+<a id="buildall" class="anchor" href="#buildall" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>build:all</code>:</h4>
+
+<p>Run <code>build:css</code> and <code>build:js</code>.</p>
+
+<h4>
+<a id="watchcss" class="anchor" href="#watchcss" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>watch:css</code>:</h4>
+
+<p>Run <code>build:css</code> when a scss file is modified.</p>
+
+<h4>
+<a id="watchall" class="anchor" href="#watchall" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><code>watch:all</code>:</h4>
+
+<p>run <code>serve</code> and <code>watch:css</code> in parallele.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>This script is published under the <a href="./LICENSE">MIT license</a></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/Elhebert">Elhebert</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
